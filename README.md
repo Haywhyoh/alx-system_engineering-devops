@@ -1,1 +1,1 @@
-This is a colliection of my simple shell scripts I created to learn bash
+A collection od bash scripts for redirection tasks done at ALX
