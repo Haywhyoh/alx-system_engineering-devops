@@ -1,0 +1,2 @@
+#!/bin/bash
+PATH_count = find $PATH -type d | wc -l
