@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#loop Best school 9 times and print Hi the ninth time
+n=1
+while [ $n -lt 11 ];
+do 
+    echo "Best School"
+    if [ $n -eq 9 ]
+    then 
+        echo "Hi"
+    fi
+    n=$((n + 1))
+done
