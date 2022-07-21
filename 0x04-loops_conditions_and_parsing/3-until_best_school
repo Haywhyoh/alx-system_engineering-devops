@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#write a bas script to loop using until
+n=0
+until [ $n -gt 9 ];
+do
+    echo "Best School"
+    n=$((n+=1));
+done;
