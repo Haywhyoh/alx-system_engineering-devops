@@ -11,7 +11,7 @@ do
         echo "bad luck from China";
     elif [ $n -eq 9 ]
     then
-        echo "bad fron Japan";
+        echo "bad luck fron Japan";
     elif [ $n -eq 17 ]
     then
         echo "bad luck from Italy"
