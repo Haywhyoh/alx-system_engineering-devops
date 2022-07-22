@@ -1,9 +1,7 @@
-#!/bin/bash
-#a Bash script that displays:
-#The content of the current directory
-#In a list format
-#Where only the part of the name after the first dash is displayed (refer to the example)
-for i in *;
-do
-echo "$i"| cut -d '-' -f2
+#!/usr/bin/env bash
+#Script displays content of current directory, in a list format
+#Only part of the name after the 1st dash is displayed
+command=$(ls)
+for i in $command ; do
+    echo "$i" | cut -d '-' -f2
 done
