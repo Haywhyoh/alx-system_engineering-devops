@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #gives information about a file called holbertonschool
-name="holbertonschool"
+name="school"
 if [ -e "$name" ]
 then
     echo "$name file exists"
