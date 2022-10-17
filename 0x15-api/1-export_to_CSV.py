@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+'''
+gathers information about an employee by ID and returns their TODO progress
+'''
+import sys
+import csv
+import requests
+
+
+if __name__ == "__main__":
+    url = 'https://jsonplaceholder.typicode.com/'
+
+    userid = sys.argv[1]
+    user = '{}users/{}'.format(url, userid)
+    res = requests.get(user)
+    json_o = res.json()
+    name = json_o.get('name')
+
+    todos = '{}todos?userId={}'.format(url, userid)
+    res = requests.get(todos)
+    tasks = res.json()
+    l_task = []
+    for task in tasks:
+        l_task.append([userid,
+                       name,
+                       task.get('completed'),
+                       task.get('title')])
+
+    filename = "{}.csv".format(userid)
+    with open(filename, w) as employee_file:
+        employee_writer = csv.writer(employee_file, delimeter=',',
+                                     quotechar='"',
+                                     quoting=csv.QUOTE_ALL)
+        for task in l_task:
+            employee_writer.writerow(task)
