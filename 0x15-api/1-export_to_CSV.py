@@ -27,7 +27,7 @@ if __name__ == "__main__":
                        task.get('title')])
 
     filename = "{}.csv".format(userid)
-    with open(filename, w) as employee_file:
+    with open(filename, mode = 'w') as employee_file:
         employee_writer = csv.writer(employee_file, delimeter=',',
                                      quotechar='"',
                                      quoting=csv.QUOTE_ALL)
