@@ -9,7 +9,8 @@ import sys
 
 def get_info():
     """the method to get info"""
-    name_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(sys.argv[1])
+    url = 'https://jsonplaceholder.typicode.com/'
+    name_url = '{}users/{}'.format(url, sys.argv[1])
     name = requests.get(name_url).json().get('name')
     tasks = requests.get('https://jsonplaceholder.typicode.com/todos')
     tasks = tasks.json()
@@ -27,6 +28,7 @@ def get_info():
     for title in titles:
         print('\t ', end="")
         print(title)
-    
+
+
 if __name__ == "__main__":
     get_info()
