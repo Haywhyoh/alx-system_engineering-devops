@@ -21,7 +21,7 @@ def get_info():
         if task['userId'] == int(sys.argv[1]):
             if task['completed'] is True:
                 complete += 1
-                titles.append(task['titles'])
+                titles.append(task['title'])
             total += 1
     print("Employee {} is done with tasks({}/{}):"
           .format(name, complete, total))
