@@ -2,9 +2,9 @@
 '''
 gathers information about an employee by ID and returns their TODO progress
 '''
-import sys
 import csv
 import requests
+import sys
 
 
 if __name__ == "__main__":
